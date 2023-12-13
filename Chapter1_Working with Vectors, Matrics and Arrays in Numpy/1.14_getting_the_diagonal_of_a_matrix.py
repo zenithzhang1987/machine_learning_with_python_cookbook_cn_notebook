@@ -1,38 +1,35 @@
 """
 Problem/问题：
-You need to get the diagonal elements of a matrix.
-Numpy 取矩阵的对角线
+Calculating Dot Products.
+Numpy 向量点乘
 """
 
 import numpy as np
 
-# 创建 的矩阵
-matrix = np.array([[1, 2, 3],
-                   [4, 5, 6],
-                   [7, 8, 9]])
+# 创建 两个向量
+vector_a = np.array([[1, 2, 3]])
+vector_b = np.array([[4, 5, 6]])
 
-# 取矩阵对角线上的值
-matrix.diagonal()
-"""
-array([1, 5, 9])
-"""
+# numpy 计算点积
+np.dot(vector_a, vector_b)
 
-# 对角线向上移动
-matrix.diagonal(1)
+# python 计算
+vector_a @ vector_b
 """
-array([2, 6])
-"""
-
-# 对角线向下移动
-matrix.diagonal(-1)
-"""
-array([4, 8])
+32
 """
 
 """
-要拿矩阵对角线上的值，可以使用
-matrix.diagonal()
+向量点乘得到点积，又叫数量积，标量积
+numpy使用方法 np.dot()
+python可以直接使用运算符 @
 
-还可以带上偏移量参数，
-让对角线上移或下移拿值，很方便
+点积就是 向量对应位置上点相乘之和
+
+记住，
+两个向量点积越大越相似
+点积>0，向量夹角 0 - 90 度
+点积=0，相互垂直
+点积<0, 向量夹角 90-180 度
+
 """
